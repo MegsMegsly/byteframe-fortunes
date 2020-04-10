@@ -4,7 +4,7 @@ const { resolve } = require('path')
 
 class Byteframe {
   constructor(directory = 'fortunes') {
-    this.directory = directory
+    this.directory = resolve(__dirname, directory)
     this.readdir = promisify(readdir)
   }
 
